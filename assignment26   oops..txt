@@ -1,0 +1,334 @@
+1
+#include<iostream>
+using namespace std;
+class Complex{
+    private:
+    int a,b;
+    public:
+    void setdata(int x,int y)
+    {
+        a=x;
+        b=y;
+    }
+    void showdata()
+    {
+        cout<<"\n"<<"real= "<<a<<"img= "<<b;
+    }
+};
+int main()
+{
+    Complex c1,c2;
+    c1.setdata(6,7);
+    c2.setdata(9,7);
+    c1.showdata();
+    c2.showdata();
+    return 0;
+}
+2
+#include<iostream>
+using namespace std;
+class time
+{
+    private:
+    int hr,min,sec;
+    public:
+    void setdata(int x,int y,int z)
+    {
+       hr=x,min=y,sec=z; 
+    }
+    void showdata()
+    {
+        cout<<hr<<" hr "<<min<<" min "<<sec<<" sec "<<endl;
+    }
+};
+int main()
+{
+    time t1;
+    t1.setdata(3,45,20);
+    t1.showdata();
+    return 0;
+}
+3
+#include<iostream>
+using namespace std;
+class Factorial{
+    private:
+    int n;
+    int fact;
+    public:
+    void setdata(int x)
+    {
+        n=x;
+    }
+    int  getN()
+    {
+        return n;
+    }
+    int getfactorial()
+    {
+        return fact;
+    }
+    void calculatefactorial()
+    {
+         int i,f=1;
+        for(i=1;i<=n;i++)
+        {
+            f=f*i;
+        }
+         fact=f;
+    }
+};
+int main()
+{
+    Factorial f,f1,f2;
+    f.setdata(5);
+    f1.setdata(6);
+    f2.setdata(10);
+    f.calculatefactorial();
+    f1.calculatefactorial();
+    f2.calculatefactorial();
+    cout<<"factorial of "<<" "<<f.getN()<<" is "<<f.getfactorial()<<endl;
+        cout<<"factorial of "<<" "<<f.getN()<<" is "<<f1.getfactorial()<<endl;
+            cout<<"factorial of "<<" "<<f.getN()<<" is "<<f2.getfactorial()<<endl;
+    return 0;
+}
+4
+#include<iostream>
+using namespace std;
+class  LargestNumber
+{
+    private:
+    int a,b,c;
+    public:
+    void set(int x,int y,int z)
+    {
+        a=x,b=y,c=z;
+    }
+    int calcuatelargestnumber()
+    {
+        if(a>b && a<c)
+        return a;
+        else if(b>c)
+        return b;
+        else
+        return c;
+    }
+};
+int main()
+{
+    LargestNumber l1;
+    l1.set(3,4,5);
+    l1.calcuatelargestnumber();
+    cout<<"largest number is "<<l1.calcuatelargestnumber()<<endl;
+}
+5
+#include<iostream>
+using namespace std;
+class Reverse
+{
+    private:
+    int n,rev;
+    public:
+    void set(int x)
+    {
+        n=x;
+    }
+    int Getinput()
+    {
+        return n;
+    }
+    int getreverse()
+    {
+        return rev;
+    }
+    void calculatereverse()
+    {
+        int re=0;
+        while(n!=0)
+        {
+            re=re*10+n%10;
+            n=n/10;
+        }
+        rev=re;
+    }
+};
+int main()
+{
+    Reverse r;
+    r.set(1298);
+    r.calculatereverse();
+    cout<<"reverse"<<r.Getinput()<<" is "<<r.getreverse()<<endl;
+
+}
+6
+#include<iostream>
+using namespace std;
+class Square
+{
+    private:
+    int x;
+   static int count;
+    public:
+    void setdata(int a)
+    {
+        x=a;
+        count++;
+    }
+    int findsquare()
+    {
+        return x*x;
+    }
+    int countsquare()
+    {
+        return count;
+    }
+
+};
+int Square::count=0;
+int main()
+{
+     Square s1,s2;
+     s1.setdata(9);
+     s2.setdata(71);
+     s1.findsquare();
+     s2.findsquare();
+     cout<<"find square "<<s1.findsquare()<<endl;
+     cout<<"square of function is "<<s1.countsquare()<<endl;
+     cout<<"find square "<<s2.findsquare()<<endl;
+     cout<<"square of function is "<<s2.countsquare();
+     return 0;
+}
+7
+#include<iostream>
+using namespace std;
+class Greastest
+{
+    private:
+    int a,b,c;
+    public:
+    void setGreastst(int x,int y,int z)
+    {
+        a=x,b=y,c=z;
+    }
+    int calcultemax()
+    {
+        if(a>b && a<c)
+        return a;
+        else if(b>c)
+        return b;
+        else
+        return c;
+    }
+};
+int main()
+{
+    Greastest g1;
+    g1.setGreastst(9,18,17);
+    g1.calcultemax();
+    cout<<"calculte is "<<g1.calcultemax();
+    return 0;
+}
+8
+#include<iostream>
+using namespace std;
+class Rectangular
+{
+    private:
+    int a,b,area;
+    public:
+    void set(int x,int y)
+    {
+        a=x,b=y;
+    }
+    int calculaterectangular()
+    {
+        
+        area=a*b;
+        return area;
+    }
+};
+int main()
+{
+    Rectangular r,r1;
+    r.set(6,7);
+    r1.set(7,8);
+    r.calculaterectangular();
+    r1.calculaterectangular();
+    cout<<"area is "<<r.calculaterectangular()<<endl;
+        cout<<"area is "<<r1.calculaterectangular()<<endl;
+    return 0;
+}
+9
+#include<iostream>
+using namespace std;
+class Circle
+{
+    private:
+    float pi=3.14;
+    float r;
+    public:
+    void set(float x)
+    {
+        r=x;
+    }
+    int area()
+    {
+        return pi*r*r;
+    }
+};
+int main()
+{
+    Circle c1;
+    c1.set(7);
+    c1.area();
+    cout<<" circle is "<<c1.area()<<endl;
+}
+10
+#include<iostream>
+using namespace std;
+class Area
+{
+    private:
+    float side,lenth,breath,radius;
+    public:
+    void setsquare(float a)
+    {
+        side=a;
+    }
+    void setrectangular(float l,float b)
+    {
+        lenth=l,breath=b;
+    }
+    void setcircle(float r)
+    {
+        radius=r;
+    }
+    int findsquare()
+    {
+        return side*side;
+    }
+    int findrectangular()
+    {
+        return lenth*breath;
+    }
+    int findcircle()
+    {
+        return 3.14*radius*radius;
+    }
+};
+int main()
+{
+    Area a;
+    a.setsquare(55);
+    a.setrectangular(6,90);
+    a.setcircle(7);
+    a.findsquare();
+    a.findrectangular();
+    a.findcircle();
+    cout<<" sqaure is "<< a.findsquare()<<endl;
+     cout<<" rectangular is "<< a.findrectangular()<<endl;
+      cout<<" circle is "<< a.findcircle()<<endl;
+
+}
+
+
